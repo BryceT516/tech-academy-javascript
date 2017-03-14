@@ -15,7 +15,7 @@
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
   
-  <nav class="navbar navbar-default navbar-fixed-top">
+  <nav class="navbar navbar-default " data-spy="affix" data-offset="100" role="navigation">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
@@ -28,7 +28,7 @@
       <div class="collapse navbar-collapse" id="myNavBar">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="#home">HOME</a></li>
-          <li><a href="#pictures">PICTURES</a></li>
+          <li id="navPictures"><a href="#pictures">PICTURES</a></li>
           <li><a href="#portfolio">.</a></li>
           <li><a href="#contact">.</a></li>
         </ul>
@@ -38,70 +38,98 @@
 
 
 
-  <div class="content container" id="pictures">
-    <div class="row">
-      <div class="col-sm-12">
-        &nbsp;<br>&nbsp;
-      </div>
+
+  <div class="row" id="home">
+    <div class="col-sm-12">
+      &nbsp;<br>&nbsp;<br>&nbsp;<br>&nbsp;
     </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="carousel slide" id="featured">
-
-        <ol class="carousel-indicators">
-          <li data-target="#featured" data-slide-to="0" class="active"></li>
-          <li data-target="#featured" data-slide-to="1"></li>
-          <li data-target="#featured" data-slide-to="2"></li>
-          <li data-target="#featured" data-slide-to="3"></li>
-          <li data-target="#featured" data-slide-to="4"></li>
-          <li data-target="#featured" data-slide-to="5"></li>
-          <li data-target="#featured" data-slide-to="6"></li>
-        </ol>
-
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="./images/arduino.jpg" class="img-response center-block" alt="arduino">
-              <div class="carousel-caption">Arduino Uno wired up with some LEDs</div>
-            </div>
-            <div class="item">
-              <img src="./images/create.jpg" class="img-response center-block"  alt="Hand drawn word 'Create'">
-            </div>
-            <div class="item">
-              <img src="./images/drone.jpg" class="img-response center-block"  alt="a quadcopter drone">
-            </div>
-            <div class="item">
-              <img src="./images/lego-ctrl.jpg" class="img-response center-block"  alt="A lego person holding the control key from a keyboard">
-            </div>
-            <div class="item">
-              <img src="./images/satellite.jpg" class="img-response center-block"  alt="overhead image of a satellite in orbit">
-            </div>
-            <div class="item">
-              <img src="./images/servers.jpg" class="img-response center-block"  alt="a row of IBM server cabinets in a row in a room">
-            </div>
-            <div class="item">
-              <img src="./images/solar-panels.jpg" class="img-response center-block"  alt="a large array of solar panels in a field">
-            </div>
-          </div> <!-- Carousel inner -->
-
-          <a href="#featured" class="left carousel-control" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-          </a>
-          <a href="#featured" class="right carousel-control" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-          </a>
-
-        </div>
-
-        <h2>Our Mission</h2>
-        <p>This is all about our mission, let me tell you a story all about how
-        my life got flipped, turned upside down. </p>
-        <p>And another thing, this is important information you need to know I really
-        mean it this is important and special.</p>
-      </div>
-    </div>
-
   </div>
+
+
+  <div class="row">
+
+    <div class="col-sm-8">
+      <div class="flex-container">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a href="#exoticpets" role="button" data-toggle="collapse" data-parent="#accordion"
+                aria-expanded="false" aria-controls="exoticpets">
+                  Exotic Pets
+                </a>
+                <a href="" data-toggle="tooltip" data-placement="top" title="Get information about caring for exotic pets.">
+                  <span class="glyphicon glyphicon-info-sign"></span>
+                </a>
+              </h4>
+            </div>
+            <div class="panel-collapse collapse " id="exoticpets" role="tabpanel" arialabelledby="headingOne">
+              <div class="panel-body">
+                <img src="./images/drone.jpg" class="img-response center-block"  alt="a quadcopter drone">
+                
+                <p>This is information about exotic pets and how you should not keep them as it is bad. These
+                types of pets are dangerous and cost a lot of money to keep. Also these animals should be free to roam 
+                and have the republicans kill off because they are in the way of the next development that will make 
+                their people money and keep the rest of us poor and un-insured.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a href="#grooming" role="button" data-toggle="collapse" data-parent="#accordion"
+                aria-expanded="false" aria-controls="grooming">Grooming</a>
+                <a href="" data-toggle="tooltip" data-placement="top" title="Get information about grooming services.">
+                  <span class="glyphicon glyphicon-info-sign"></span>
+                </a>
+              </h4>
+            </div>
+            <div class="panel-collapse collapse " id="grooming" role="tabpanel" arialabelledby="headingTwo">
+              <div class="panel-body">
+                <img src="./images/lego-ctrl.jpg" class="img-response center-block"  alt="A lego person holding the control key from a keyboard">
+                
+                <p>It doesn't matter how nice you make your animal look since the republicans are destroying our environment and we are all
+                going to die anyway. Also these animals should be free to roam 
+                and have the republicans kill off because they are in the way of the next development that will make 
+                their people money and keep the rest of us poor and un-insured.</p>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a href="#generalhealth" role="button" data-toggle="collapse" data-parent="#accordion"
+                aria-expanded="false" aria-controls="generalhealth">General Health</a>
+                <a href="" data-toggle="tooltip" data-placement="top" title="Get information about general health services.">
+                  <span class="glyphicon glyphicon-info-sign"></span>
+                </a>
+              </h4>
+            </div>
+            <div class="panel-collapse collapse " id="generalhealth" role="tabpanel" arialabelledby="headingThree">
+              <div class="panel-body">
+                <img src="./images/create.jpg" class="img-response center-block"  alt="Hand drawn word 'Create'">
+                
+                <p>All these animals can have better health insurance than what humans can get under this new health care bill, Trumpcare.
+                 Also these animals should be free to roam 
+                and have the republicans kill off because they are in the way of the next development that will make 
+                their people money and keep the rest of us poor and un-insured.</p>   
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="flex-container">
+        <div class="panel panel-default">
+          <div class="panel-heading"><h3>Side panel info</h3></div>
+          <div class="panel-body"><p>Content in the side panel. This is whatever needs to be displayed over on this side.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="content container">
     <div class="row">
@@ -121,12 +149,12 @@
           Vaccination Policy
         </button>
 
-        <div class="modal" id="policy" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
-          <div class="modal-dialog" role="document">
+        <div class="modal fade" id="policy" tabindex="-1" role="dialog" aria-labelledby="modalLabel">
+          <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  
+                  <span aria-hidden="true">&times;</span>
                 </button>
                 <h3 class="modal-title" id="modalLabel">Vaccination Policy</h3>
               </div>
@@ -135,6 +163,11 @@
                 honey. you will not like that. That will be a very bad time for you. So, follow the policy and noone gets eaten by ants. 
                 Sounds good right, so follow these policies. All the policies, not one, not two, all of them. And do it now! No lolly-gagging. 
                 None of that is allowed.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" data-dismiss="modal" class="btn btn-default">
+                  Close
+                </button>
                 <button type="button" class="btn btn-warning"
                   data-toggle="modal" data-target="#subPolicy">
                   Vaccination Sub-Policy

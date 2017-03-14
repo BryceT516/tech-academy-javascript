@@ -85,17 +85,11 @@ body {
   color: #fff !important;
 }
 
-.panel-heading {
-  word-wrap: false;
-}
 
 .nav-tabs {
   color: #6d6e71;
 }
 
-.panel-body {
-  color: #000000;
-}
 
 footer {
   background: url(../images/background-hexes2.png) no-repeat ;

@@ -23,10 +23,6 @@ $(document).ready(function(){
   });
 })
 
-$(function(){
-  $('[data-toggle="tooltip"]').tooltip();
-
-});
 
 $(function(){
 
@@ -37,9 +33,4 @@ $(function(){
     keyboard: false
   });
 
-});
-
-
-$('#navPictures').on('click', function(){
-  $('.nav-tabs a[href="#pictures"]').click();
 });
