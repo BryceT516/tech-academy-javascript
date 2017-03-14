@@ -1,0 +1,112 @@
+body {
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  /*color: #9c6043;*/
+  color: #fefefe;
+  background-color: #010101;
+}
+
+.jumbotron {
+  font-family: Montserrat, sans-serif;
+  background-color: #ffffff;
+  background: url(../images/background-hexes2.png) no-repeat ;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #ffffff;
+  padding: auto;
+}
+
+#mainHeading {
+	height: 500px;
+}
+
+#headerNameMain {
+	margin: 300px 0 0 0;
+	background-color: rgba(10, 10, 10, 0.5);
+	border-radius: 0 15px 15px 0;
+}
+
+#headerFName {
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+  color: #fff;
+  letter-spacing: 5pt;
+  word-spacing: 21pt;
+  font-size: 4.5em;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  line-height: 1;
+  font-weight: 50;
+  padding: 0 0 0 10px;
+}
+
+#headerLName {
+  text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.9);
+  color: #fff;
+  letter-spacing: 1pt;
+  word-spacing: 21pt;
+  font-size: 4.5em;
+  text-align: left;
+  font-family: Montserrat, sans-serif;
+  line-height: 2;
+  font-weight: 600;
+  padding: 0 0 0 5px;
+}
+
+
+.bg-grey {
+  /*background-color: #d8d8d2;*/
+  background-color: #6d6e71;
+}
+
+
+.navbar {
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 0;
+  background-color: #000000;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a {
+  color: #cc0000 !important;
+  background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: transparent;
+  color: #fff !important;
+}
+
+footer {
+  background: url(../images/background-hexes2.png) no-repeat ;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 500px;
+}
+
+footer .glyphicon {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #cc0000;
+
+}
+
+.carousel-inner .item .img{
+  margin: 0 auto;
+}
+
+
+.modal-body {
+  color: #000000;
+}
+.modal-body h3 {
+  text-align: center;
+}
