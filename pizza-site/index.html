@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Practice Page One</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+
+		<link rel="stylesheet" href="css/base.css">
+
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" 
+						data-toggle="collapse" data-target="#mainNavBar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">
+						SCRUMPTIOUS.pizza
+					</a>
+				</div>
+				<div class="collapse navbar-collapse" id="mainNavBar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" id="startOrderBtn">Start Order</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</nav>
+
+		<div class="container-fluid">
+			<div class="" id="mainHeading">
+				
+			</div>
+
+			<div class="text-center" id="startContent">
+				<a href="#" class="btn btn-default"><h1>Start Order</h1></a>
+			</div>
+
+			
+			<div class="row overlay" id="orderFormContent">
+
+				<div class="col-sm-8 col-sm-offset-1">
+					<form id="orderForm">
+						<div class="container-fluid">
+							<div class="panel-group" id="mainAccordion" rol="tablist" aria-multiselectable="true">
+								<div class="panel panel-default"> <!-- Start Size option section -->
+									<div class="panel-heading text-center" role="headingOne">
+										<h4 class="panel-title">
+											<a href="#sizeOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="sizeOptions" data-parent="#mainAccordion">Size&nbsp;<span class="caret"></span></a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse in" id="sizeOptions" role="tabpanel" arialabelledby="headingOne">
+										<div class="panel-body ">
+											<div class="col-sm-7 col-sm-offset-5">
+												<div class="group form-group" id="sizeInput">
+													<div class="radio">
+														<label><input type="radio" name="radioSize" value="personal">Personal</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioSize" value="medium">Medium</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioSize" value="large">Large</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioSize" value="extraLarge">Extra Large</label>
+													</div>								
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END Size option section -->
+								<div class="panel panel-default"><!-- Start crust option section -->
+									<div class="panel-heading text-center" role="headingTwo">
+										<h4 class="panel-title">
+											<a href="#crustOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="crustOptions" data-parent="#mainAccordion">Crust</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse" id="crustOptions" role="tabpanel" arialabelledby="headingTwo">
+										<div class="panel-body">
+											<div class="col-sm-7 col-sm-offset-5">
+												<div class="group form-group" id="crustInput">
+													<div class="radio">
+														<label><input type="radio" name="radioCrust" value="plain">Plain Crust</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioCrust" value="garlicButter">Garlic Butter Crust</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioCrust" value="cheeseStuffed">Cheese Stuffed Crust</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioCrust" value="spicy">Spicy Crust</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioCrust" value="houseSpecial">House Special Crust</label>
+													</div>		
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END crust option section -->
+
+								<div class="panel panel-default"><!-- Start Sauce option section -->
+									<div class="panel-heading text-center" role="headingThree">
+										<h4 class="panel-title">
+											<a href="#sauceOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="sauceOptions" data-parent="#mainAccordion">Sauce</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse" id="sauceOptions" role="tabpanel" arialabelledby="headingThree">
+										<div class="panel-body">
+											<div class="col-sm-7 col-sm-offset-5">
+												<div class="group form-group" id="sauceInput">
+													<div class="radio">
+														<label><input type="radio" name="radioSauce">Marinara Sauce</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioSauce">White Sauce</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioSauce">Barbeque Sauce</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioSauce">No Sauce</label>
+													</div>	
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END Sauce option section -->
+
+								<div class="panel panel-default"><!-- Start Cheese option section -->
+									<div class="panel-heading text-center" role="headingFour">
+										<h4 class="panel-title">
+											<a href="#cheeseOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="cheeseOptions" data-parent="#mainAccordion">Cheese</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse" id="cheeseOptions" role="tabpanel" arialabelledby="headingFour">
+										<div class="panel-body">
+											<div class="col-sm-7 col-sm-offset-5">
+												<div class="group form-group" id="cheeseInput">
+													<div class="radio">
+														<label><input type="radio" name="radioCheese">Regular</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioCheese">No cheese</label>
+													</div>
+													<div class="radio">
+														<label><input type="radio" name="radioCheese">Extra cheese +$3.00<</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END Cheese option section -->
+
+								<div class="panel panel-default"><!-- Start Meats option section -->
+									<div class="panel-heading text-center" role="headingFive">
+										<h4 class="panel-title">
+											<a href="#meatOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="meatOptions" data-parent="#mainAccordion">Meats</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse" id="meatOptions" role="tabpanel" arialabelledby="headingFive">
+										<div class="panel-body">
+											<div class="col-sm-7 col-sm-offset-5">
+												<div class="group form-group" id="meatInput">
+													<div class="checkbox">
+														<label><input type="checkbox" id="pepperoni">Pepperoni</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="sausage">Sausage</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="canadianBacon">Canadian Bacon</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="groundBeef">Ground Beef</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="anchovy">Anchovy</label>
+													</div>	
+													<div class="checkbox">
+														<label><input type="checkbox" id="chicken">Chicken</label>
+													</div>		
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END Meats option section -->
+
+								<div class="panel panel-default"><!-- Start toppings option section -->
+									<div class="panel-heading text-center" role="headingSix">
+										<h4 class="panel-title">
+											<a href="#toppingsOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="toppingsOptions" data-parent="#mainAccordion">Toppings</a>
+										</h4>
+									</div>
+									<div class="panel-collapse collapse" id="toppingsOptions" role="tabpanel" arialabelledby="headingSix">
+										<div class="panel-body">
+											<div class="col-sm-7 col-sm-offset-5">
+												<div class="group form-group" id="toppingsInput">
+													<div class="checkbox">
+														<label><input type="checkbox" id="topTomatoes">Tomatoes</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="topOnions">Onions</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="topOlives">Olives</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="topGreenPeppers">Green peppers</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="topMushrooms">Mushrooms</label>
+													</div>	
+													<div class="checkbox">
+														<label><input type="checkbox" id="topPineapple">Pineapple</label>
+													</div>
+													<div class="checkbox">
+														<label><input type="checkbox" id="topSpinach">Spinach</label>
+													</div>	
+													<div class="checkbox">
+														<label><input type="checkbox" id="topJalapeno">Jalapeno</label>
+													</div>		
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- END Toppings option section -->
+
+							</div>
+						</div>
+					</form>
+				</div>
+					
+				<div class="col-sm-3"> <!-- START sidebar for running total -->
+					<div class="container-fluid">
+						<div class="panel-group" id="runningTotalAccordion" rol="tablist" aria-multiselectable="true">
+							<div class="panel panel-default"> <!-- Start current pizza section -->
+								<div class="panel-heading text-center" role="currentTotalHeading">
+									<h4 class="panel-title">
+										Current Pizza
+									</h4>
+								</div>
+								
+									<div class="panel-body">
+										<div class="" id="currentTotalList">
+											<div class="row">
+												<div class="col-xs-12 text-left">
+													<h5>Size:</h5>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 text-right" id="currentSize">
+													
+												</div>
+											</div>
+											
+											<div class="row">
+												<div class="col-xs-12 text-left">
+													<h5>Crust:</h5>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 text-right" id="currentCrust">
+													
+												</div>
+											</div>
+
+											<div class="row">								<div class="col-xs-12 text-left">
+													<h5>Sauce:</h5>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 text-right" id="currentSauce">
+													
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-xs-12 text-left">
+													<h5>Cheese:</h5>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 text-right" id="currentCheese">
+													
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-xs-12 text-left">
+													<h5>Meat:</h5>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 text-right" id="currentMeat">
+													
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-xs-12 text-left">
+													<h5>Toppings:</h5>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-xs-12 text-right" id="currentToppings">
+													
+												</div>
+											</div>
+
+										</div>
+									</div>
+								
+							</div><!-- END current pizza section -->
+							<div class="panel panel-default"><!-- Start pizza one section -->
+								<div class="panel-heading text-center" role="pizzaTotalHeading1">
+									<h4 class="panel-title">
+										<a href="#pizzaTotal1" role="button" data-toggle="collapse" aria-expanded="false" aria-control="pizzaTotal1" data-parent="#runningTotalAccordion">Pizza One</a>
+									</h4>
+								</div>
+								<div class="panel-collapse collapse" id="pizzaTotal1" role="tabpanel" arialabelledby="pizzaTotalHeading1">
+									<div class="panel-body">
+										<div class="group form-group" id="pizzaTotalList1">
+											<ul>
+												<li>Size:</li>
+												<li>Crust:</li>
+												<li>Sauce:</li>
+												<li>Cheese:</li>
+												<li>Meat:</li>
+												<li>Toppings:</li>
+												<li>Sub-total:</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div><!-- END pizza one section -->
+						</div>
+					</div>
+				</div> <!-- END sidebar for running total -->
+			</div>
+			
+
+			<footer>
+				<div class="container-fluid text-center">
+					<div class="container-fluid text-center" id="footerText">
+						<h4>SCRUMPTIOUS.pizza | Code by Bryce Tucker | &copy; 2017</h4>
+					</div>
+				</div>
+			</footer>
+
+		</div>
+
+
+
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  	crossorigin="anonymous"></script>
+
+		<script>window.jQuery || document.write('<script src="js/jquery-3.1.1.min.js"><\/script>')</script>
+
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+
+
+	    <script src="js/pizza-site.js"></script>
+
+
+	</body>
+</html>
