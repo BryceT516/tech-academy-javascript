@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>jQuery Practice Page One</title>
+		<title>Scrumptious Pizza</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="UTF-8">
 		<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
@@ -27,7 +27,7 @@
 				</div>
 				<div class="collapse navbar-collapse" id="mainNavBar">
 					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" id="startOrderBtn">Start Order</a></li>
+						<li><a href="index.html" id="startOverBtn">Start Over</a></li>
 					</ul>
 				</div>
 			</div>
@@ -40,20 +40,20 @@
 			</div>
 
 			<div class="text-center" id="startContent">
-				<a href="#" class="btn btn-default"><h1>Start Order</h1></a>
+				<a href="#" class="btn btn-default" id="startOrderMainBtn"><h1>Start Order</h1></a>
 			</div>
 
 			
 			<div class="row overlay" id="orderFormContent">
 
-				<div class="col-sm-8 col-sm-offset-1">
+				<div class="col-sm-7 col-xs-offset-1">
 					<form id="orderForm">
 						<div class="container-fluid">
 							<div class="panel-group" id="mainAccordion" rol="tablist" aria-multiselectable="true">
 								<div class="panel panel-default"> <!-- Start Size option section -->
 									<div class="panel-heading text-center" role="headingOne">
 										<h4 class="panel-title">
-											<a href="#sizeOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="sizeOptions" data-parent="#mainAccordion">Size&nbsp;<span class="caret"></span></a>
+											<a href="#sizeOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="sizeOptions" data-parent="#mainAccordion" id="sizePanel">Size</a>
 										</h4>
 									</div>
 									<div class="panel-collapse collapse in" id="sizeOptions" role="tabpanel" arialabelledby="headingOne">
@@ -80,7 +80,7 @@
 								<div class="panel panel-default"><!-- Start crust option section -->
 									<div class="panel-heading text-center" role="headingTwo">
 										<h4 class="panel-title">
-											<a href="#crustOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="crustOptions" data-parent="#mainAccordion">Crust</a>
+											<a href="#crustOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="crustOptions" data-parent="#mainAccordion" id="crustPanel">Crust</a>
 										</h4>
 									</div>
 									<div class="panel-collapse collapse" id="crustOptions" role="tabpanel" arialabelledby="headingTwo">
@@ -111,7 +111,7 @@
 								<div class="panel panel-default"><!-- Start Sauce option section -->
 									<div class="panel-heading text-center" role="headingThree">
 										<h4 class="panel-title">
-											<a href="#sauceOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="sauceOptions" data-parent="#mainAccordion">Sauce</a>
+											<a href="#sauceOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="sauceOptions" data-parent="#mainAccordion" id="saucePanel">Sauce</a>
 										</h4>
 									</div>
 									<div class="panel-collapse collapse" id="sauceOptions" role="tabpanel" arialabelledby="headingThree">
@@ -119,16 +119,16 @@
 											<div class="col-sm-7 col-sm-offset-5">
 												<div class="group form-group" id="sauceInput">
 													<div class="radio">
-														<label><input type="radio" name="radioSauce">Marinara Sauce</label>
+														<label><input type="radio" name="radioSauce" value="marinara">Marinara Sauce</label>
 													</div>
 													<div class="radio">
-														<label><input type="radio" name="radioSauce">White Sauce</label>
+														<label><input type="radio" name="radioSauce" value="white">White Sauce</label>
 													</div>
 													<div class="radio">
-														<label><input type="radio" name="radioSauce">Barbeque Sauce</label>
+														<label><input type="radio" name="radioSauce" value="barbeque">Barbeque Sauce</label>
 													</div>
 													<div class="radio">
-														<label><input type="radio" name="radioSauce">No Sauce</label>
+														<label><input type="radio" name="radioSauce" value="noSauce">No Sauce</label>
 													</div>	
 												</div>
 											</div>
@@ -139,7 +139,7 @@
 								<div class="panel panel-default"><!-- Start Cheese option section -->
 									<div class="panel-heading text-center" role="headingFour">
 										<h4 class="panel-title">
-											<a href="#cheeseOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="cheeseOptions" data-parent="#mainAccordion">Cheese</a>
+											<a href="#cheeseOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="cheeseOptions" data-parent="#mainAccordion" id="cheesePanel">Cheese</a>
 										</h4>
 									</div>
 									<div class="panel-collapse collapse" id="cheeseOptions" role="tabpanel" arialabelledby="headingFour">
@@ -147,13 +147,13 @@
 											<div class="col-sm-7 col-sm-offset-5">
 												<div class="group form-group" id="cheeseInput">
 													<div class="radio">
-														<label><input type="radio" name="radioCheese">Regular</label>
+														<label><input type="radio" name="radioCheese" value="regular">Regular</label>
 													</div>
 													<div class="radio">
-														<label><input type="radio" name="radioCheese">No cheese</label>
+														<label><input type="radio" name="radioCheese" value="noCheese">No cheese</label>
 													</div>
 													<div class="radio">
-														<label><input type="radio" name="radioCheese">Extra cheese +$3.00<</label>
+														<label><input type="radio" name="radioCheese" value="extraCheese">Extra cheese +$3.00<</label>
 													</div>
 												</div>
 											</div>
@@ -164,7 +164,7 @@
 								<div class="panel panel-default"><!-- Start Meats option section -->
 									<div class="panel-heading text-center" role="headingFive">
 										<h4 class="panel-title">
-											<a href="#meatOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="meatOptions" data-parent="#mainAccordion">Meats</a>
+											<a href="#meatOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="meatOptions" data-parent="#mainAccordion" id="meatsPanel">Meats</a>
 										</h4>
 									</div>
 									<div class="panel-collapse collapse" id="meatOptions" role="tabpanel" arialabelledby="headingFive">
@@ -188,7 +188,10 @@
 													</div>	
 													<div class="checkbox">
 														<label><input type="checkbox" id="chicken">Chicken</label>
-													</div>		
+													</div>
+													<div class="button"	>
+														<button id="btnMeatDone" class="btn btn-primary">done</button>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -198,7 +201,7 @@
 								<div class="panel panel-default"><!-- Start toppings option section -->
 									<div class="panel-heading text-center" role="headingSix">
 										<h4 class="panel-title">
-											<a href="#toppingsOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="toppingsOptions" data-parent="#mainAccordion">Toppings</a>
+											<a href="#toppingsOptions" role="button" data-toggle="collapse" aria-expanded="false" aria-control="toppingsOptions" data-parent="#mainAccordion" id="toppingsPanel">Toppings</a>
 										</h4>
 									</div>
 									<div class="panel-collapse collapse" id="toppingsOptions" role="tabpanel" arialabelledby="headingSix">
@@ -206,28 +209,28 @@
 											<div class="col-sm-7 col-sm-offset-5">
 												<div class="group form-group" id="toppingsInput">
 													<div class="checkbox">
-														<label><input type="checkbox" id="topTomatoes">Tomatoes</label>
+														<label><input type="checkbox" id="tomatoes">Tomatoes</label>
 													</div>
 													<div class="checkbox">
-														<label><input type="checkbox" id="topOnions">Onions</label>
+														<label><input type="checkbox" id="onions">Onions</label>
 													</div>
 													<div class="checkbox">
-														<label><input type="checkbox" id="topOlives">Olives</label>
+														<label><input type="checkbox" id="olives">Olives</label>
 													</div>
 													<div class="checkbox">
-														<label><input type="checkbox" id="topGreenPeppers">Green peppers</label>
+														<label><input type="checkbox" id="greenPeppers">Green peppers</label>
 													</div>
 													<div class="checkbox">
-														<label><input type="checkbox" id="topMushrooms">Mushrooms</label>
+														<label><input type="checkbox" id="mushrooms">Mushrooms</label>
 													</div>	
 													<div class="checkbox">
-														<label><input type="checkbox" id="topPineapple">Pineapple</label>
+														<label><input type="checkbox" id="pineapple">Pineapple</label>
 													</div>
 													<div class="checkbox">
-														<label><input type="checkbox" id="topSpinach">Spinach</label>
+														<label><input type="checkbox" id="spinach">Spinach</label>
 													</div>	
 													<div class="checkbox">
-														<label><input type="checkbox" id="topJalapeno">Jalapeno</label>
+														<label><input type="checkbox" id="jalapeno">Jalapeno</label>
 													</div>		
 												</div>
 											</div>
@@ -240,109 +243,102 @@
 					</form>
 				</div>
 					
-				<div class="col-sm-3"> <!-- START sidebar for running total -->
+				<div class="col-sm-4"> <!-- START sidebar for running total -->
+					<div class="container-fluid text-center">
+						<button class="btn btn-default" data-toggle="modal" data-target="#receipt" id="btnPlaceOrder"> 
+							Place Order &nbsp;&nbsp;$<span id="placeOrderPrice">0</span>.00
+						</button>
+					</div>
 					<div class="container-fluid">
 						<div class="panel-group" id="runningTotalAccordion" rol="tablist" aria-multiselectable="true">
 							<div class="panel panel-default"> <!-- Start current pizza section -->
 								<div class="panel-heading text-center" role="currentTotalHeading">
 									<h4 class="panel-title">
-										Current Pizza
+										Current Pizza &nbsp;$<span id="currentPizzaPrice">0</span>.00
 									</h4>
 								</div>
 								
-									<div class="panel-body">
-										<div class="" id="currentTotalList">
-											<div class="row">
-												<div class="col-xs-12 text-left">
-													<h5>Size:</h5>
-												</div>
+								<div class="panel-body">
+									<div class="" id="currentTotalList">
+										<div class="row">
+											<div class="col-xs-12 text-left">
+												<h5>Size:</h5>
 											</div>
-											<div class="row">
-												<div class="col-xs-12 text-right" id="currentSize">
-													
-												</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 text-right" id="currentSize"></div>
+										</div>
+										
+										<div class="row">
+											<div class="col-xs-12 text-left">
+												<h5>Crust:</h5>
 											</div>
-											
-											<div class="row">
-												<div class="col-xs-12 text-left">
-													<h5>Crust:</h5>
-												</div>
-											</div>
-											<div class="row">
-												<div class="col-xs-12 text-right" id="currentCrust">
-													
-												</div>
-											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 text-right" id="currentCrust"></div>
+										</div>
 
-											<div class="row">								<div class="col-xs-12 text-left">
-													<h5>Sauce:</h5>
-												</div>
+										<div class="row">								<div class="col-xs-12 text-left">
+												<h5>Sauce:</h5>
 											</div>
-											<div class="row">
-												<div class="col-xs-12 text-right" id="currentSauce">
-													
-												</div>
-											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 text-right" id="currentSauce"></div>
+										</div>
 
-											<div class="row">
-												<div class="col-xs-12 text-left">
-													<h5>Cheese:</h5>
-												</div>
+										<div class="row">
+											<div class="col-xs-12 text-left">
+												<h5>Cheese:</h5>
 											</div>
-											<div class="row">
-												<div class="col-xs-12 text-right" id="currentCheese">
-													
-												</div>
-											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 text-right" id="currentCheese"></div>
+										</div>
 
-											<div class="row">
-												<div class="col-xs-12 text-left">
-													<h5>Meat:</h5>
-												</div>
+										<div class="row">
+											<div class="col-xs-12 text-left">
+												<h5>Meat:</h5>
 											</div>
-											<div class="row">
-												<div class="col-xs-12 text-right" id="currentMeat">
-													
-												</div>
-											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 text-right" id="currentMeat"></div>
+										</div>
 
-											<div class="row">
-												<div class="col-xs-12 text-left">
-													<h5>Toppings:</h5>
-												</div>
+										<div class="row">
+											<div class="col-xs-12 text-left">
+												<h5>Toppings:</h5>
 											</div>
-											<div class="row">
-												<div class="col-xs-12 text-right" id="currentToppings">
-													
-												</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 text-right" id="currentToppings"></div>
+										</div>
+										<hr>
+										<div class="row">
+											<div class="col-xs-12 text-center">
+											<button class="btn btn-default text-center" id="btnAddToOrder">
+												<span class="caret"></span>
+													&nbsp;Add to Order&nbsp;
+												<span class="caret"></span>
+											</button>
 											</div>
-
 										</div>
 									</div>
+								</div>
 								
 							</div><!-- END current pizza section -->
-							<div class="panel panel-default"><!-- Start pizza one section -->
+							<div class="panel panel-default" id="fullOrderPanel"><!-- Start full order section -->
 								<div class="panel-heading text-center" role="pizzaTotalHeading1">
 									<h4 class="panel-title">
-										<a href="#pizzaTotal1" role="button" data-toggle="collapse" aria-expanded="false" aria-control="pizzaTotal1" data-parent="#runningTotalAccordion">Pizza One</a>
+										<a href="#pizzaTotal1" role="button" data-toggle="collapse" aria-expanded="false" aria-control="pizzaTotal1" data-parent="#runningTotalAccordion">Full Order &nbsp;$<span id="fullOrderPrice">0</span>.00</a>
 									</h4>
 								</div>
 								<div class="panel-collapse collapse" id="pizzaTotal1" role="tabpanel" arialabelledby="pizzaTotalHeading1">
 									<div class="panel-body">
-										<div class="group form-group" id="pizzaTotalList1">
-											<ul>
-												<li>Size:</li>
-												<li>Crust:</li>
-												<li>Sauce:</li>
-												<li>Cheese:</li>
-												<li>Meat:</li>
-												<li>Toppings:</li>
-												<li>Sub-total:</li>
-											</ul>
+										<div class="group form-group" id="pizzaTotalList">
 										</div>
 									</div>
 								</div>
-							</div><!-- END pizza one section -->
+							</div><!-- END full order section -->
 						</div>
 					</div>
 				</div> <!-- END sidebar for running total -->
@@ -357,6 +353,52 @@
 				</div>
 			</footer>
 
+		</div>
+
+		<div class="modal" id="receipt" tabindex="-1" role="dialog" aria-labelledby="modallabel">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h3 class="modal-title" id="modallabel">
+							ORDER RECEIPT
+						&nbsp;&nbsp;&nbsp;
+						<a href="index.html" class="btn btn-primary">
+							Accept Order &nbsp;&nbsp;&nbsp;
+							<span id="acceptOrderTotalPrice"></span>
+						</a>
+						</h3>
+					</div>
+					<div class="modal-body">
+						<div class="container-fluid" id="receiptContainer">
+							<div class="row">
+								<div class="col-md-4">
+									&nbsp;
+								</div>
+								<div class="col-md-4 text-center">
+									<table class="table" id="infoTable">
+										<tr>
+											<td colspan="2" align="center">
+												Pizza 1...
+											</td>
+										</tr>
+										<tr>
+											<td align="right">
+												Extra Large
+											</td>
+											<td align="left">
+												$16.00
+											</td>
+										</tr>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 

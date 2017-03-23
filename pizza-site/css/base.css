@@ -1,3 +1,7 @@
+body {
+	background-color: #b7b6b6;
+}
+
 #mainHeading {
 	height:200px;
 	background-image: url('../images/pizzaBackground-top.jpg');
@@ -7,14 +11,14 @@
 	visibility: ;
 	z-index: -1;
 
-	position: absolute;
-	left:2000px;
+
 }
 
 #mainHeading h1 {
 	margin-top: 60px;
 	margin-left: 30px;
 	margin-bottom: 0px;
+	visibility: hidden;
 }
 
 #startContent {
@@ -26,16 +30,29 @@
 	visibility: ;
 
 	z-index: -1;
-	position: absolute;
-	left:2000px;
+
 }
 
 #startContent h1{
-	margin-top: 0px;
+	margin-top: 5px;
+
+	z-index: -1;
 }
 
-#formContent {
+#startContent a {
+	visibility: ;
+	z-index: -1;
+}
 
+#orderFormContent {
+	z-index: 50;
+	position: fixed;
+	top:0px;
+	visibility: hidden;
+}
+
+.overlay {
+	width:100%;
 }
 
 footer {
@@ -64,3 +81,23 @@ footer h4 {
 		
 }
 
+#fullOrderPanel {
+	max-height: 300px;
+	overflow-y: scroll;
+}
+
+
+#infoTable {
+	min-width:300px;
+}
+
+#infoTable td{
+	padding-left: 5px;
+	border: 1px solid gray;
+}
+
+#receiptContainer {
+	position: relative;
+	max-height: 600px;
+	overflow-y: scroll;
+}
